@@ -52,14 +52,14 @@ nav{
 }
 
 .title_container input{
-    width: 40px;
+    width: 100px;
     text-align: center;
     border: 2px solid #6d7682;
     background: none;
     border-radius: 5px;
     color: #6d7682;
     font-size: 12px;
-    padding: 0px 16px;
+    padding: 2px 16px;
     margin: 50px 28px 0px 14px;
 }
 .about{
@@ -69,13 +69,21 @@ nav{
 
 }
 .about h2{
+    font-weight: bold;
     padding-left: 300px;
-    font-size: 16px;
+    font-size: 24px;
 }
-.about img{
-    padding-left: 230px;
+#man{
+    padding-left: 250px;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+.saveRez{
+    margin-left: 270px;
+    margin-top: 30px;
+}
+.saveRez img{
+    margin-right: 4px;
 }
 .about p{
     padding-left: 100px;
@@ -98,7 +106,8 @@ nav{
 }
 .skills h2{
     margin:100px 500px 100px 500px;
-    font-size: 16px;
+    font-size: 24px;
+    font-weight: bold;
     text-transform: uppercase;
     color: #344051;
 }
@@ -134,7 +143,8 @@ nav{
 
 #cases{
     text-align: center;
-    font-size: 16px;
+    font-size: 24px;
+    font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -179,8 +189,8 @@ nav{
     text-align: center;
     background: #63b5ae;
     border-radius: 5px;
-    color: white;
-    font-size: 12px;
+    /*color: white;*/
+    /*font-size: 12px;*/
 }
 
 #website{
@@ -307,7 +317,7 @@ nav{
     margin-bottom: 50px;
 }
 .piece{
-    width: 100%;
+    /*width: 100%;*/
     margin-left: 400px;
 }
 .piece p{
