@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Наша годовщина — [Ваши имена]</title>
+  <meta name="description" content="Личный сайт-подарок о нашей истории и любви" />
+  <style>
+    :root{
+      --bg:#0f172a; /* slate-900 */
+      --card:#111827ee; /* gray-900 */
+      --text:#e5e7eb; /* gray-200 */
+      --muted:#9ca3af; /* gray-400 */
+      --accent:#f472b6; /* pink-400 */
+      --accent2:#60a5fa; /* blue-400 */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:radial-gradient(1200px 600px at 100% 0%,#1f2937 0%,var(--bg) 55%),var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+    a{color:var(--accent)}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+    header{padding:56px 0;text-align:center}
+    .tag{display:inline-block;border:1px solid #ffffff22;color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px;letter-spacing:.04em}
+    h1{font-size:48px;line-height:1.1;margin:16px 0 8px}
+    .date{color:var(--muted);font-size:14px}
+    .heart{display:inline-block;transform:translateY(2px);}
+    .card{background:linear-gradient(180deg,#111827f2,#0b1020f2);border:1px solid #ffffff14;border-radius:20px;padding:24px;box-shadow:0 10px 30px #00000066}
+    .grid{display:grid;gap:16px}
+    @media(min-width:860px){.grid-2{grid-template-columns:1fr 1fr}}
+    .btn{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#0b1020;padding:12px 16px;border-radius:12px;font-weight:600;text-decoration:none}
+    .muted{color:var(--muted)}
+    figure{margin:0}
+    img{width:100%;height:100%;object-fit:cover;border-radius:16px;border:1px solid #ffffff18}
+    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+    .gallery figure{aspect-ratio:1/1;grid-column:span 4}
+    @media(min-width:860px){
+      .gallery figure:nth-child(1){grid-column:span 7;aspect-ratio:16/9}
+      .gallery figure:nth-child(2){grid-column:span 5}
+      .gallery figure:nth-child(3){grid-column:span 6}
+      .gallery figure:nth-child(4){grid-column:span 6}
+      .gallery figure:nth-child(5){grid-column:span 5}
+      .gallery figure:nth-child(6){grid-column:span 7;aspect-ratio:16/9}
+    }
+    .timeline{position:relative;padding-left:22px}
+    .timeline:before{content:"";position:absolute;left:8px;top:0;bottom:0;width:2px;background:#ffffff22}
+    .tl-item{position:relative;margin:14px 0}
+    .tl-item:before{content:"";position:absolute;left:-2px;top:7px;width:12px;height:12px;border-radius:50%;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 0 0 3px #0003}
+    .quote{font-size:18px;border-left:3px solid #ffffff22;padding-left:12px;margin:0}
+    footer{padding:40px 0;text-align:center;color:var(--muted)}
+    .center{text-align:center}
+    .countdown{display:flex;gap:12px;justify-content:center;margin-top:10px}
+    .cd-box{min-width:70px}
+    .cd-val{font-size:28px;font-weight:700}
+    .cd-label{font-size:12px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="tag">Сделано с любовью</span>
+      <h1>[Ваше имя] <span class="heart">❤</span> [Имя жены]</h1>
+      <div class="date">Годовщина: <strong>[ДД.ММ.ГГГГ]</strong></div>
+      <div class="countdown" id="countdown" hidden>
+        <div class="cd-box"><div class="cd-val" id="d">0</div><div class="cd-label">дней</div></div>
+        <div class="cd-box"><div class="cd-val" id="h">0</div><div class="cd-label">часов</div></div>
+        <div class="cd-box"><div class="cd-val" id="m">0</div><div class="cd-label">минут</div></div>
+        <div class="cd-box"><div class="cd-val" id="s">0</div><div class="cd-label">секунд</div></div>
+      </div>
+      <p class="muted">Этот сайт — мой подарок тебе. Здесь наша история, фото и несколько слов от меня.</p>
+      <a class="btn" href="#story">Перейти к истории</a>
+    </header>
+
+    <section class="card" id="gallery">
+      <h2>Наши моменты</h2>
+      <p class="muted">Замените изображения на свои. Рекомендуемый размер: 1600×900 или квадрат 1200×1200.</p>
+      <div class="gallery">
+        <!-- Замените src на ссылки ваших фото (например, /images/1.jpg). -->
+        <figure><img src="https://picsum.photos/seed/anniv1/1600/900" alt="Фото 1"></figure>
+        <figure><img src="https://picsum.photos/seed/anniv2/1000" alt="Фото 2"></figure>
+        <figure><img src="https://picsum.photos/seed/anniv3/1000" alt="Фото 3"></figure>
+        <figure><img src="https://picsum.photos/seed/anniv4/1000" alt="Фото 4"></figure>
+        <figure><img src="https://picsum.photos/seed/anniv5/1000" alt="Фото 5"></figure>
+        <figure><img src="https://picsum.photos/seed/anniv6/1600/900" alt="Фото 6"></figure>
+      </div>
+    </section>
+
+    <section class="grid grid-2" id="story" style="margin-top:16px">
+      <div class="card">
+        <h2>Наша история</h2>
+        <p>Мы встретились [когда и где]. Первое свидание было [короткое воспоминание]. С тех пор мы прошли [что прошли].</p>
+        <p>Я благодарен за твой смех, за поддержку, за тепло. Ты делаешь каждый день яснее.</p>
+        <p class="muted">Подсказка: 3–6 коротких абзацев. Тон простой и искренний.</p>
+      </div>
+      <div class="card">
+        <h2>Хронология</h2>
+        <div class="timeline">
+          <div class="tl-item"><strong>ДД.ММ.ГГГГ</strong> — Встреча</div>
+          <div class="tl-item"><strong>ДД.ММ.ГГГГ</strong> — Первое свидание</div>
+          <div class="tl-item"><strong>ДД.ММ.ГГГГ</strong> — Совместное путешествие</div>
+          <div class="tl-item"><strong>ДД.ММ.ГГГГ</strong> — Обручение/свадьба/значимое событие</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2>Письмо для тебя</h2>
+      <blockquote class="quote">"[Ваше короткое послание в 2–3 предложения]"</blockquote>
+      <p class="muted">Можете заменить на любимую цитату.</p>
+    </section>
+
+    <section class="grid grid-2" style="margin-top:16px">
+      <div class="card">
+        <h2>Плейлист</h2>
+        <p class="muted">Вставьте ссылку на Spotify/YouTube Music. Можно вставить iframe виджет.</p>
+        <!-- Пример: замените URL на свой embed. -->
+        <div style="position:relative;padding-top:56.25%">
+          <iframe title="Playlist" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:16px"></iframe>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Контакты</h2>
+        <p>Почта для поздравлений: <a href="mailto:[email]">[email]</a></p>
+        <p>Секретная страница для нее: <a href="#" title="Можно добавить пароль позже">/for-her</a></p>
+      </div>
+    </section>
+
+    <footer>
+      Сделано с любовью • © <span id="year"></span>
+    </footer>
+  </div>
+
+  <script>
+    // Обновление года в футере
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Простой обратный отсчет к годовщине. Замените дату ниже на вашу.
+    // Формат: ГГГГ-ММ-ДДTЧЧ:ММ:СС (локальное время)
+    const anniversaryISO = '[2025-12-31T00:00:00]';
+    if(!anniversaryISO.includes('[')){
+      const box = document.getElementById('countdown');
+      box.hidden = false;
+      const dEl = document.getElementById('d');
+      const hEl = document.getElementById('h');
+      const mEl = document.getElementById('m');
+      const sEl = document.getElementById('s');
+      const target = new Date(anniversaryISO);
+      const tick = () => {
+        const now = new Date();
+        let diff = Math.max(0, target - now);
+        const d = Math.floor(diff / (1000*60*60*24)); diff -= d*24*60*60*1000;
+        const h = Math.floor(diff / (1000*60*60)); diff -= h*60*60*1000;
+        const m = Math.floor(diff / (1000*60)); diff -= m*60*1000;
+        const s = Math.floor(diff / 1000);
+        dEl.textContent = d; hEl.textContent = h; mEl.textContent = m; sEl.textContent = s;
+      };
+      tick();
+      setInterval(tick, 1000);
+    }
+  </script>
+
+  <!--
+  ИНСТРУКЦИИ ПО ПУБЛИКАЦИИ ЗА 10–20 МИНУТ:
+  1) GitHub Pages (бесплатно)
+     • Создайте репозиторий, назовите его username.github.io
+     • Загрузите этот файл как index.html в корень
+     • Откройте https://username.github.io
+  2) Netlify/Vercel (бесплатно)
+     • Создайте сайт, перетащите этот index.html в дэшборд
+     • Либо подключите репозиторий, настройте корень как /
+  3) Tilda/Wix/Framer
+     • Импортируйте/вставьте HTML-блок и вставьте содержимое
+  ДОБАВИТЬ ДОМЕН:
+     • Купите домен у любого регистратора и подключите к выбранному хостингу
+  КОНФИДЕНЦИАЛЬНОСТЬ:
+     • Не публикуйте персональные данные без согласия
+     • Ставьте noindex, если сайт должен быть приватным
+  Добавьте в <head>: <meta name="robots" content="noindex,nofollow">
+  -->
+</body>
+</html>
